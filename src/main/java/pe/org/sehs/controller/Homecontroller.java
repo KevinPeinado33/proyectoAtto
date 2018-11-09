@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 // hola mundo XD
 @Controller
 public class Homecontroller {
+
 @GetMapping("/")
 public String index() {
 	return "index";
@@ -20,7 +21,19 @@ public String main2() {
 }
 @GetMapping("/solicitud")
 public String soli() {
-	return "NuevaSolicitudPedido";
+	
+	
+	return "NuevoPedido";
 }
+@GetMapping("/bandeja")
+public String bande() {
+	return "BandejaEncargado";
+}
+
+@GetMapping("/validacionpedido")
+public String validacionP() {
+	return "ValidarPedido";
+}
+
 
 }

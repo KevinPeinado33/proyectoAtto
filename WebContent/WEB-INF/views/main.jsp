@@ -55,8 +55,7 @@
 			</div>
 			<div class="content-body">
 				<!-- Background color start -->
-				locoo
-
+				<a href="validacionpedido">Validar Pedidos</a>
 			</div>
 		</div>
 	</div>

@@ -6,13 +6,14 @@
           <li class="nav-item">
             <a class="navbar-brand" href="index.html">
               <img class="brand-logo" alt="Logo" src="../../../app-assets/images/logo/stack-logo.png">
-              <h2 class="brand-text">Atto</h2>
+              <h2 class="brand-text" >cAtto</h2>
             </a>
           </li>
           <li class="nav-item d-md-none">
             <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a>
           </li>
         </ul>
+        
       </div>
       <div class="navbar-container content">
         <div class="collapse navbar-collapse" id="navbar-mobile">
@@ -203,20 +204,16 @@
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
       
-      <div class="badge block badge-success" style="margin-top:40px;">
+      
+      <div class="badge block badge-info" style="margin-top:40px;">
                       <a href="#">
                         <i class="fa fa-home font-medium-2"></i>
-                        <span>Iglesia Villa Unión</span>
+                        <span>Sucursal Trujillo</span>
                       </a>
                     </div>           
                     
                     
-        <div class="badge block badge-info" style="margin-top:7px;">
-                      <a href="#">
-                        <i class="fa fa-address-card font-medium-2"></i>
-                        <span>Encargado de Iglesia</span>
-                      </a>
-                    </div>                     
+         
     
         <li class=" navigation-header">
           <span>General</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right"

@@ -9,26 +9,13 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
-     <context:component-scan base-package="pe.org.sehs" />
-<jpa:repositories base-package="pe.org.sehs"></jpa:repositories>
-<!-- dataSource configuration -->
+	<context:component-scan base-package="pe.org.sehs" />
+	<!-- dataSource configuration -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/bdprueba"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value=""></property>
-	</bean>
-<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-	<property name="generateDdl" value="false" />
-	<property name="showSql" value="true" />
-	<property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect" />
-</bean>	
-<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-    <property name="packagesToScan" value="pe.edu.upeu.sprintemplate.entity" />
-	<property name="dataSource" ref="dataSource" />
-	<property name="jpaVendorAdapter" ref="jpaVendorAdapter" />
+    <property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+    <property name="url" value="jdbc:oracle:thin:@localhost:1521/pdborcl"></property>
+    <property name="username" value="bdatto"></property>
+    <property name="password" value="123456"></property>    
 </bean>
-<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-<property name="entityManagerFactory" ref="entityManagerFactory"></property>
-</bean>
+
 </beans>
