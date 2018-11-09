@@ -24,7 +24,7 @@
 		<div class="login-box">
 			<form class="login-form" action="home" method="post">
 				<h3 class="login-head">
-					<i class="fa fa-lg fa-fw fa-user"></i>SIGN IN
+					<i class="fa fa-lg fa-fw fa-user"></i>INICIAR SESION
 				</h3>
 				<div class="form-group">
 					<label class="control-label">USERNAME</label> <input
