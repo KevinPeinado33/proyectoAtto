@@ -35,5 +35,21 @@ public String validacionP() {
 	return "ValidarPedido";
 }
 
+@GetMapping("/GenerarConsolidado")
+public String GenerarC() {
+	return "GenerarConsolidado";
+}
+
+
+@GetMapping("/cotizacion")
+public String GenerarCo() {
+	return "GenerarCotizacion";
+}
+
+
+@GetMapping("/EnviarPedido")
+public String caso() {
+	return "EnviarPedPro";
+}
 
 }

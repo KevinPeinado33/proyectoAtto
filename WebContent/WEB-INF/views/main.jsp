@@ -56,6 +56,9 @@
 			<div class="content-body">
 				<!-- Background color start -->
 				<a href="validacionpedido">Validar Pedidos</a>
+				<a href="cotizacion">ParteJOve1</a>
+				<a href="EnviarPedido">ParteJOve2</a>
+				<!-- masomenos :,c pon los nombre pe xd ok p :'v -->
 			</div>
 		</div>
 	</div>
