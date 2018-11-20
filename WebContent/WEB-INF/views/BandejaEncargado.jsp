@@ -11,10 +11,8 @@
 <spring:url value="/recursos" var="urlrecursos"></spring:url>
 <link href="${urlrecursos}/app-assets/css/vendors.min.css"
 	rel="stylesheet">
-
 <link rel="stylesheet" type="text/css"
-	href="${urlrecursos}/app-assets/vendors/css/tables/datatable/datatables.min.css">
-
+	href="${urlrecursos}/app-assets/vendors/css/extensions/sweetalert.css">
 <link rel="apple-touch-icon"
 	href="${urlrecursos}/app-assets/images/ico/apple-icon-120.png">
 <link rel="shortcut icon" type="image/x-icon"
@@ -23,22 +21,23 @@
 	href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/vendors/css/forms/toggle/switchery.min.css">
+<link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/app-assets/css/vendors.css">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/vendors/css/extensions/toastr.css">
+
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/app-assets/css/app.css">
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/app-assets/css/core/menu/menu-types/vertical-menu.css">
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/app-assets/css/core/colors/palette-gradient.css">
-<link rel="stylesheet" type="text/css"
-	href="${urlrecursos}/assets/css/style.css">
-<link rel="stylesheet" type="text/css"
-	href="${urlrecursos}/app-assets/vendors/css/tables/datatable/datatables.min.css">
-<link href="https://fonts.googleapis.com/css?family=Raleway"
-	rel="stylesheet">
+
+
 <style>
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 </style>
 
@@ -53,7 +52,12 @@ body {
 		<div class="content-wrapper">
 			<div class="content-header row">
 				<div class="content-header-left col-md-6 col-12 mb-2">
-					<h3 class="content-header-title mb-0">Mi Bandeja</h3>
+					<h3 class="content-header-title mb-0">
+						<a href="#" class="btn btn-social-icon mr-1 mb-1 btn-dropbox"
+							style="margin-right: 15px;"> <span
+							class="fa fa-folder-open font-medium-3 font-medium-3"></span>
+						</a>Mi bandeja
+					</h3>
 					<div class="row breadcrumbs-top">
 						<div class="breadcrumb-wrapper col-12">
 							<ol class="breadcrumb">
@@ -89,81 +93,26 @@ body {
 								<div class="card-body card-dashboard">
 
 
-									<ul class="nav nav-tabs nav-underline">
-										<li class="nav-item"><a class="nav-link active"
-											id="homeIcon1-tab1" data-toggle="tab" href="#homeIcon11"
-											aria-controls="homeIcon11" aria-expanded="true"><i
-												class="fa fa-envelope-o"></i>Pendientes</a></li>
-										<li class="nav-item"><a class="nav-link "
-											id="profileIcon1-tab1" data-toggle="tab"
-											href="#profileIcon11" aria-controls="profileIcon11"
-											aria-expanded="false"><i class="fa fa-archive"></i>Finalizados</a>
-										</li>
-
-
-									</ul>
-									<div class="tab-content px-1 pt-1">
-										<div role="tabpanel" class="tab-pane active in" id="homeIcon11"
-											aria-labelledby="homeIcon1-tab1" aria-expanded="true">
 
 
 
-											<div class="container" style="margin-top:20px;">
-												<div class="table-responsive">
-													<table class="table" id="tablita1">
-														<thead>
-															<tr>
-																<th>Código</th>
-																<th>Nombre</th>
-																<th>Tipo</th>
-																<th>Cantidad</th>
-																<th>Acciones</th>
-															</tr>
-														</thead>
-														<tbody>
+									<div class="container" style="margin-top: 20px;">
+										<div class="table-responsive">
+											<table class="table" id="tablita1">
+												<thead>
+													<tr>
+														<th>Código</th>
+														<th>Nombre</th>
+														<th>Tipo</th>
+														<th>Cantidad</th>
+														<th>Acciones</th>
+													</tr>
+												</thead>
+												<tbody>
 
-														</tbody>
-													</table>
-												</div>
-
-											</div>
-
-
-
-
+												</tbody>
+											</table>
 										</div>
-										<div class="tab-pane " id="profileIcon11"
-											role="tabpanel" aria-labelledby="profileIcon1-tab1"
-											aria-expanded="false">
-											
-											
-											<div class="container" style="margin-top:20px;">
-												<div class="table-responsive">
-													<table class="table" id="tablita2">
-														<thead>
-															<tr>
-																<th>Código</th>
-																<th>Nombre</th>
-																<th>Tipo</th>
-																<th>Cantidad</th>
-																<th>Acciones</th>
-															</tr>
-														</thead>
-														<tbody>
-
-														</tbody>
-													</table>
-												</div>
-
-											</div>
-											
-											
-											
-											
-										</div>
-
-
-
 
 									</div>
 								</div>
@@ -213,9 +162,6 @@ body {
 		type="text/javascript"></script>
 	<script src="${urlrecursos}/app-assets/js/scripts/customizer.js"
 		type="text/javascript"></script>
-	<!-- END STACK JS-->
-	<!-- BEGIN PAGE LEVEL JS-->
 
-	<!-- END PAGE LEVEL JS-->
 </body>
 </html>

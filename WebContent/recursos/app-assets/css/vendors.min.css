@@ -121,8 +121,8 @@ sup {
 	--breakpoint-md: 768px;
 	--breakpoint-lg: 992px;
 	--breakpoint-xl: 1200px;
-	--font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	--font-family-monospace: 'Montserrat', Georgia, 'Times New Roman', Times, serif
+	--font-family-sans-serif: arial;
+	--font-family-monospace: arial;
 }
 
 @media print {
@@ -236,7 +236,10 @@ output {
 }
 
 html {
-	font-family: sans-serif;
+
+font-family: 'Montserrat', sans-serif;
+
+
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -535,8 +538,7 @@ h6,
 kbd,
 pre,
 samp {
-	font-family: Montserrat, Georgia, 'Times New Roman', Times, serif
-}
+font-family: 'Montserrat', sans-serif;}
 
 summary {
 	display: list-item
@@ -2793,7 +2795,7 @@ select.form-control:focus::-ms-value {
 .was-validated .custom-file-input:valid ~ .custom-file-label,
 .was-validated .custom-select:valid,
 .was-validated .form-control:valid {
-	border-color: #16D39A
+	border-color: blue
 }
 
 .form-control-plaintext.form-control-lg,
@@ -3387,8 +3389,8 @@ fieldset:disabled a.btn {
 .btn-success:not(:disabled):not(.disabled):active,
 .show > .btn-success.dropdown-toggle {
 	color: #FFF;
-	background-color: #11A578;
-	border-color: #109970
+	background-color:blue;
+	border-color: blue
 }
 
 .btn-success:not(:disabled):not(.disabled).active:focus,

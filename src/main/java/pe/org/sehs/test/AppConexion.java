@@ -1,21 +1,31 @@
 package pe.org.sehs.test;
 
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import pe.org.sehs.dao.LoginDao;
+import pe.org.sehs.daoImp.LoginDaoimp;
+
+
+
+
 
 
 
 public class AppConexion {
 
+
+	private static ApplicationContext context;
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		/*
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("root-context.xml");
-		UsuarioRepository repo = context.getBean("usuarioRepository",UsuarioRepository.class);
-		Usuario u = new Usuario(0,"kayla3","3241","1");
-		repo.save(u);
-		context.close();
-		*/
+		
+		
+		//p.NuevoPedido("loco", "asda", 1, 1);
+		
 	}
 
 }

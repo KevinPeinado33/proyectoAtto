@@ -7,13 +7,44 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
-<link rel="stylesheet" type="text/css"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<spring:url value="/recursos" var="urlrecursos"></spring:url>
-<link href="${urlrecursos}/css/template.css" rel="stylesheet">
 
+
+<spring:url value="/recursos" var="urlrecursos"></spring:url>
+<link href="${urlrecursos}/app-assets/css/vendors.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/vendors/css/extensions/sweetalert.css">
+<link rel="apple-touch-icon"
+	href="${urlrecursos}/app-assets/images/ico/apple-icon-120.png">
+<link rel="shortcut icon" type="image/x-icon"
+	href="${urlrecursos}/app-assets/images/ico/favicon.ico">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/vendors/css/forms/toggle/switchery.min.css">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/css/vendors.css">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/vendors/css/extensions/toastr.css">
+
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/css/app.css">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/css/core/menu/menu-types/vertical-menu.css">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/css/core/colors/palette-gradient.css">
+
+
+<style>
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+</style>
 </head>
-<body>
+
+
+<!-- 
 	<section class="material-half-bg">
 		<div class="cover"></div>
 	</section>
@@ -74,5 +105,154 @@
 			</form>
 		</div>
 	</section>
+	
+	-->
+
+<body
+	class="vertical-layout vertical-menu 1-column   menu-expanded blank-page blank-page"
+	data-open="click" data-menu="vertical-menu" data-col="1-column">
+	<!-- ////////////////////////////////////////////////////////////////////////////-->
+	<div class="app-content content">
+		<div class="content-wrapper">
+			<div class="content-header row"></div>
+			<div class="content-body">
+				<section class="flexbox-container">
+					<div
+						class="col-12 d-flex align-items-center justify-content-center">
+
+
+						<div class="col-md-10 col-10 box-shadow-2 p-0">
+							<div class="card border-grey border-lighten-3 m-0" style="height:550px;">
+
+								<div class="card-content">
+									<div class="card-body">
+										<div class="row">
+
+
+											<div class="col-xl-6 col-lg-6 col-md-12 mb-1">s</div>
+											<div class="col-xl-6 col-lg-8 col-md-12 mb-1">
+
+
+												<div class="container-fluid" style="width: 75%;padding-top:40px;">
+
+ 												
+ 												<h3>Bienvenido al sistema <button class="button">Atto</button></h3>
+ 												<p>Ingrese los campos requeridos pe</p>
+ 												
+	<form  action="home" method="post">
+
+													<fieldset class="form-group" style="margin-top:50px;">
+														<label for="titulo" class="bmd-label-floating">Username:</label>
+														<input type="text" class="form-control" name="uss"
+															placeholder="">
+
+
+
+
+													</fieldset>
+
+
+
+
+
+
+													<fieldset class="form-group">
+														<label for="titulo" class="bmd-label-floating"
+															style="margin-top: 20px;">Password:</label> <input
+															type="password" class="form-control" id="contra" name="coo"
+															placeholder="">
+
+
+
+
+													</fieldset>
+
+
+													<div class="container center-block" align="center" style="margin-top:40px;">
+														<input type="submit"
+															class="btn btn-info btn-min-width mr-1 mb-1 text-white"
+															style="height: 50px; width: 60%;" value="envia pe">
+													</div>
+
+
+
+</form>
+
+
+												</div>
+
+
+											</div>
+
+
+
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- ////////////////////////////////////////////////////////////////////////////-->
+	<!-- BEGIN VENDOR JS-->
+	<script src="${urlrecursos}/app-assets/vendors/js/vendors.min.js"
+		type="text/javascript"></script>
+	<!-- BEGIN VENDOR JS-->
+	<!-- BEGIN PAGE VENDOR JS-->
+	<script
+		src="${urlrecursos}/app-assets/vendors/js/forms/icheck/icheck.min.js"
+		type="text/javascript"></script>
+	<script
+		src="${urlrecursos}/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"
+		type="text/javascript"></script>
+	<!-- END PAGE VENDOR JS-->
+	<!-- BEGIN STACK JS-->
+	<script src="${urlrecursos}/app-assets/js/core/app-menu.js"
+		type="text/javascript"></script>
+	<script src="${urlrecursos}/app-assets/js/core/app.js"
+		type="text/javascript"></script>
+	<script src="${urlrecursos}/app-assets/js/scripts/customizer.js"
+		type="text/javascript"></script>
+	<!-- END STACK JS-->
+	<!-- BEGIN PAGE LEVEL JS-->
+	<script
+		src="${urlrecursos}/app-assets/js/scripts/forms/form-login-register.js"
+		type="text/javascript"></script>
+		
+		<script>
+		
+		$(document).ready(function() {
+			
+			
+			
+		})
+		
+		
+		
+
+		
+		
+		</script>
+		
 </body>
 </html>

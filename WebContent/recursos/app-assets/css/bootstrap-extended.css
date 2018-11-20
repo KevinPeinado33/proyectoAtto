@@ -225,7 +225,7 @@ form {
   form .form-group {
     margin-bottom: 1.5rem; }
   form .form-control {
-    border: 1px solid #ccd6e6;
+    border: 0px solid #ccd6e6;
     color: #3f587e; }
     form .form-control::-webkit-input-placeholder {
       color: #b1c1d8; }

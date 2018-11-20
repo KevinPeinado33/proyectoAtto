@@ -5,10 +5,11 @@ $(document).ready(function() {
 })
 
 var pedidosArray = new Array();
-
+var idpedido =0;
 function listarpe() {
-	
-	$.get("pedidovalidarventas",function(data) {
+	alert("maincra");
+	$.get("mostrarpedido",function(data) {
+		alert(data);
 						for ( var i in data) {						
 							$("#tablita tr:last")
 									.after(
@@ -17,7 +18,7 @@ function listarpe() {
 													+ "</td><td>"
 													+ data[i].TITULO
 													+ "</td><td>"
-													+ data[i].FE_CREACION
+													+ data[i].FE_ENTRANTE
 													+ "</td><td><button type='button' class='btn btn-warning' onclick='validarmodal("
 													+ data[i].IDPEDIDO
 													+ ")' data-toggle='modal' data-target='#large'>validame</button></td></tr>");
@@ -35,7 +36,8 @@ function listarpe() {
 }
 
 function validarmodal(a) {
-	ponerTitulo(a);
+
+	idpedido=a;
 	$.get("detallepedido",{
 						idpedido : a
 					      },
@@ -51,7 +53,7 @@ function validarmodal(a) {
 													+ "</td><td style='padding-top:20px;'>"
 													+ data[i].CODIGO
 													+ "</td><td style='padding-top:20px;'>"
-													+ data[i].NOM_PRODUCTO
+													+ data[i].NOMBRE
 													+ "</td><td style='padding-top:20px;'>"
 													+ data[i].CANTIDAD
 													+ "</td><td style='padding-top:-30px;'><div class='custom-control custom-checkbox my-1 mr-sm-2' style='margin-top:-10px;'><input type='checkbox' style='margin-top:-20px;' class='custom-control-input' id='chec"
@@ -65,6 +67,8 @@ function validarmodal(a) {
 					});
 }
 
+
+
 function ponerTitulo(b) {
 
 }
@@ -72,30 +76,47 @@ function ponerTitulo(b) {
 function validarpedido(){
 	alert('maincraaa');
 	var a=0;
+	
+    alert("esto es maincra"+idpedido);
+
 	$('#tablita2 tbody tr').each(function () {
-
-		 var 	pk = $(this).find("td").eq(0).html();
-		var nombre = $(this).find("td").eq(1).html();
-		var apellidos = $(this).find("td").eq(3).html();
-
-		alert(pk);
-		if( $("#chec"+pk+"").is(':checked') ) {
-		    alert('Completo:estado1');		 
+		 var iddetalle = $(this).find("td").eq(0).html();	
+		alert(iddetalle);
+		if( $("#chec"+iddetalle+"").is(':checked') ) {
+		    alert('Completo:estado3');	
+		    ingre(iddetalle,3);
 		}else{
-			alert('incompleto:estado 2');
+			alert('incompleto:estado 1');
+			ingre(iddetalle,1);
 			a=a+1;
 		}
 			
 		});
+	validarestadopedido(a);
+		
 	
 	
-	
+}
+function validarestadopedido(a){
 	if(a>0){
 		alert("El pedido esta incompleto:Estado pedido:faltante");
+		pe(idpedido,3);		
 	}else{
-		alert("El pedido esta completo:Estado de pedido completo");
+		alert("El pedido esta completo:Estado de pedido completo");		
+		pe(idpedido,1)
 		a=0;
 	}
-	
-	
+}
+
+
+function ingre(a,b){
+	$.post("updateDetalle",{iddetalle:a,estado:b},function(data) {
+		alert(data);
+	});
+}
+
+function pe(a,b){
+	$.post("validarpeC",{idpedido:a,estado:b},function(data) {
+		
+	});
 }

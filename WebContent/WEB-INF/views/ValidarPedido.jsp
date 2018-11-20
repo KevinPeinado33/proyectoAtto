@@ -31,18 +31,17 @@
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/assets/css/style.css">
 
-<link href="https://fonts.googleapis.com/css?family=Raleway"
-	rel="stylesheet">
-<style>
-body {
-	font-family: 'Raleway', sans-serif;
-}
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <style>
+        body,label,input{            
+    font-family: 'Quicksand', sans-serif;
 </style>
 <body
 	class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
 	data-open="click" data-menu="vertical-menu" data-col="2-columns">
 
-	<jsp:include page="template/VentasCabecera.jsp"></jsp:include>
+	<jsp:include page="template/Trabajador.jsp"></jsp:include>
 
 	<div class="app-content content">
 		<div class="content-wrapper">

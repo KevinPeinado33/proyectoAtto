@@ -22,4 +22,5 @@ public class ProductoServiceImpl implements ProductoService{
 		return pri.readAll();
 	}
 
+
 }
