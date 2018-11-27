@@ -35,7 +35,7 @@ function listar() {
 }
 
 function selecciona(a,b,c,id_pro) {
-alert("loco");
+//alert("loco");
 	var input = $("#input" + id_pro + "").val();	
 	if (input === '') {		
 		cant_faltante();
@@ -105,7 +105,7 @@ function eliminar(a) {
 
 function pedido() {
 
-	alert("esto es titulo");
+	///alert("esto es titulo");
 
 }
 
@@ -131,7 +131,7 @@ function obtenerdatos() {
 								
 	}else{
 		$.post("guardarPedido",{titulo:titu,descripcion:descri,idsucursal:1,idencargado:1}, function (data) {   
-			alert(data.IDI);
+			//alert(data.IDI);
 			Detallepedido(data.IDI);
 			/*
 			for ( var i in data) {
@@ -150,9 +150,12 @@ function Detallepedido(a){
 	var prod = JSON.stringify(ProductosSolicitados);
 		
 	$.post("guardarDetallePedido", {list:prod,idp:a}, function (data) {
-        alert(data);
-});	
+    
+	});	
 }
+
+
+
 
 function llenarobjeto(id_pro,b,a,c,input){
 	var obj = new Object();			
