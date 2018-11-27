@@ -35,9 +35,59 @@ public class PedidoServiceImpl implements PedidoService{
 
 
 	@Override
-	public int validarPedido(int idped, int idtra, int esta) {
+	public int validarPedido(String idped, int idtra, String esta) {
 		// TODO Auto-generated method stub
 		return pri.validarPedido(idped, idtra, esta);
 	}
+
+
+
+	@Override
+	public List<Map<String, Object>> listarpedidoiglesia(int id_encargado) {
+		
+		return pri.listarpedidoiglesia(id_encargado);
+		
+	}
+
+
+
+	@Override
+	public List<Map<String, Object>> listarFaltantes(int id_su) {
+		// TODO Auto-generated method stub
+		return pri.listarFaltantes(id_su);
+	}
+
+
+
+	@Override
+	public int updatepedido(String iddetalle, String cantidad) {
+		// TODO Auto-generated method stub
+		return pri.updatepedido(iddetalle, cantidad);
+	}
+
+
+
+	@Override
+	public int insertDetallePasos(String idpedido, int idtrabajador) {
+		// TODO Auto-generated method stub
+		return pri.insertDetallePasos(idpedido, idtrabajador);
+	}
+
+
+
+	@Override
+	public List<Map<String, Object>> listarpedidoasucu(int id_sucursal) {
+		// TODO Auto-generated method stub
+		return pri.listarpedidoasucu(id_sucursal);
+	}
+
+
+
+
+
+
+
+
+	
 
 }

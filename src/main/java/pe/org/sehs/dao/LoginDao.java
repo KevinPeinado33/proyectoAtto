@@ -10,5 +10,4 @@ public interface LoginDao {
 	public List<Map<String,Object>> validar(String user,String pass);
 	public List<MENU> menu(int idp);
 
-	
 }

@@ -34,11 +34,18 @@
 	href="${urlrecursos}/app-assets/css/core/menu/menu-types/vertical-menu.css">
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/app-assets/css/core/colors/palette-gradient.css">
-
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700"
+	rel="stylesheet">
 
 <style>
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	background-image: url("recursos/images/fondo.jpg");
+	/* The image used */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+	/* Resize the background image to cover the entire container */
 }
 </style>
 </head>
@@ -121,62 +128,72 @@ body {
 						class="col-12 d-flex align-items-center justify-content-center">
 
 
-						<div class="col-md-10 col-10 box-shadow-2 p-0">
-							<div class="card border-grey border-lighten-3 m-0" style="height:550px;">
+						<div class="col-md-4 col-4 box-shadow-2 p-0">
+							<div class="card border-grey border-lighten-3 m-0"
+								style="height: 550px;">
 
 								<div class="card-content">
 									<div class="card-body">
 										<div class="row">
 
 
-											<div class="col-xl-6 col-lg-6 col-md-12 mb-1">s</div>
-											<div class="col-xl-6 col-lg-8 col-md-12 mb-1">
+
+											<div class="col-xl-12 col-lg-12 col-md-12 mb-1">
 
 
-												<div class="container-fluid" style="width: 75%;padding-top:40px;">
-
- 												
- 												<h3>Bienvenido al sistema <button class="button">Atto</button></h3>
- 												<p>Ingrese los campos requeridos pe</p>
- 												
-	<form  action="home" method="post">
-
-													<fieldset class="form-group" style="margin-top:50px;">
-														<label for="titulo" class="bmd-label-floating">Username:</label>
-														<input type="text" class="form-control" name="uss"
-															placeholder="">
+												<div class="container-fluid"
+													style="width: 75%; padding-top: 50px;">
 
 
+													<h2 style="font-weight: bold">Hola!</h2>
+													<p style="font-size: 12px; color: #BFC5CC;">Bienvenido
+														al sistema de solicitudes Atto.Porfavor ingrese los datos
+														solicitados</p>
 
+													<form action="home" method="post">
 
-													</fieldset>
-
-
+														<fieldset class="form-group" style="margin-top: 50px;">
+															<label for="titulo" class="bmd-label-floating"
+																style="font-size: 13px;">Usuario:</label> <input
+																type="text" class="form-control" name="uss"
+																placeholder="">
 
 
 
 
-													<fieldset class="form-group">
-														<label for="titulo" class="bmd-label-floating"
-															style="margin-top: 20px;">Password:</label> <input
-															type="password" class="form-control" id="contra" name="coo"
-															placeholder="">
+														</fieldset>
 
 
 
 
-													</fieldset>
 
 
-													<div class="container center-block" align="center" style="margin-top:40px;">
-														<input type="submit"
-															class="btn btn-info btn-min-width mr-1 mb-1 text-white"
-															style="height: 50px; width: 60%;" value="envia pe">
-													</div>
+														<fieldset class="form-group">
+															<label for="titulo" class="bmd-label-floating"
+																style="margin-top: 13px; font-size: 13px;">Contraseña:</label>
+															<input type="password" class="form-control" id="contra"
+																name="coo" placeholder="">
 
 
 
-</form>
+
+														</fieldset>
+
+
+														<div class="container center-block" align="center"
+															style="margin-top: 60px;">
+															<input type="submit"
+																class="btn btn-min-width mr-1 mb-1 text-white"
+																style="font-weight: bold; height: 50px; width: 110%; margin-left: -20px; background-color: #55A8FD"
+																value="Ingresar">
+
+
+
+														</div>
+
+
+
+													</form>
 
 
 												</div>
@@ -198,21 +215,21 @@ body {
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- ////////////////////////////////////////////////////////////////////////////-->
 	<!-- BEGIN VENDOR JS-->
 	<script src="${urlrecursos}/app-assets/vendors/js/vendors.min.js"
@@ -238,21 +255,12 @@ body {
 	<script
 		src="${urlrecursos}/app-assets/js/scripts/forms/form-login-register.js"
 		type="text/javascript"></script>
-		
-		<script>
-		
-		$(document).ready(function() {
-			
-			
-			
-		})
-		
-		
-		
 
-		
-		
-		</script>
-		
+	<script>
+		$(document).ready(function() {
+
+		})
+	</script>
+
 </body>
 </html>

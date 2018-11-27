@@ -25,7 +25,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/app-assets/css/app.css">
 <link rel="stylesheet" type="text/css"
-	href="${urlrecursos}/app-assets/css/core/menu/menu-types/vertical-menu.css">		
+	href="${urlrecursos}/app-assets/css/core/menu/menu-types/vertical-menu.css">
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/app-assets/css/core/colors/palette-gradient.css">
 <link rel="stylesheet" type="text/css"
@@ -42,21 +42,20 @@ body {
 	class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
 	data-open="click" data-menu="vertical-menu" data-col="2-columns">
 
-	<jsp:include page="template/Trabajador.jsp"></jsp:include>
+	<jsp:include page="template/IglesiaCabecera.jsp"></jsp:include>
 
-	<div class="app-content content">
+	<div class="app-content content">	
 		<div class="content-wrapper">
 			<div class="content-header row">
 				<div class="content-header-left col-md-6 col-12 mb-2">
 					<h3 class="content-header-title mb-0">
-						<i class="fa fa-plus-circle" style="margin-right: 8px;"></i>Validar
-						Pedido
+						Productos Faltantes
 					</h3>
 					<div class="row breadcrumbs-top">
 						<div class="breadcrumb-wrapper col-12">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Menu</a></li>
-								<li class="breadcrumb-item active">Validar Pedido</li>
+								<li class="breadcrumb-item active">Productos Faltantes</li>
 							</ol>
 						</div>
 					</div>
@@ -73,8 +72,7 @@ body {
 								<div class="card-tittle">
 
 									<h4>
-										<i class="fa fa-file-text" style="margin-right: 8px;"> </i>Lista
-										Pedidos
+										<i class="fa fa-file-text" style="margin-right: 8px;"> </i>Lista de productos de pedido
 									</h4>
 
 								</div>
@@ -91,37 +89,39 @@ body {
 
 
 
-										<div class="container" style="margin-top: -18px;">
+										<div class="container" style="margin-top: 18px;">
 
 
 											<div class="table-responsive">
 												<table class="table" id="tablita">
 													<thead>
 														<tr>
-															<th>Código</th>
-															<th>Titulo</th>
-															<th>Fecha Creación</th>
-															<th>Validar</th>
+															<th>Código Pedido</th>
+															<th>Código Producto</th>
+															<th>Nombre Producto</th>														
+															<th>Cantidad</th>
+															<th>Cantidad Faltante</th>
 														</tr>
 													</thead>
 													<tbody>
-													
+														
 													</tbody>
 												</table>
 											</div>
 
 
 										</div>
-									
-									
-									
-										<div class="container pull-right" style="margin-top:5px;">
-							<button type="button" onclick="validar();"
-								class="btn btn-blue round btn-min-width mr-1 mb-1 float-right">
-								Aceptar<i class="fa fa-chevron-right" style="margin-left: 10px;"></i>
-							</button>
-						</div>
-									
+
+
+
+										<div class="container pull-right" style="margin-top: 5px;">
+											<button type="button" onclick="validar();"
+												class="btn btn-blue round btn-min-width mr-1 mb-1 float-right">
+												Aceptar<i class="fa fa-chevron-right"
+													style="margin-left: 10px;"></i>
+											</button>
+										</div>
+
 									</div>
 								</div>
 							</div>
@@ -150,10 +150,12 @@ body {
 		type="text/javascript"></script>
 	<script src="${urlrecursos}/app-assets/js/core/app.js"
 		type="text/javascript"></script>
-			<script src="${urlrecursos}/js/ConfirmarDetalleVentas.js" type="text/javascript"></script>
+
 	<script src="${urlrecursos}/app-assets/js/scripts/customizer.js"
 		type="text/javascript"></script>
 	<script src="${urlrecursos}/app-assets/js/scripts/forms/switch.js"
+		type="text/javascript"></script>
+			<script src="${urlrecursos}/js/ConfirmarDetalleVentas.js"
 		type="text/javascript"></script>
 
 

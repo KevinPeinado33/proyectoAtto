@@ -1,44 +1,41 @@
 
 $(document).ready(function() {
-	listar();
-	
-	
+	listar();	
 })
 
 var ProductosSolicitados = new Array();
 var listasReservado = new Array();
+
 function listar() {	
 	$.post("listarProductos",function(data) {						
 						for ( var i in data) {							
-							var a = String(data[i].CODIGO);
-							var b = String(data[i].NOMBRE);
-							var c = String(data[i].NOM_TIPO);
+							
 							$("#tablita tr:last")
 									.after(
-											"<tr><td hidden>"+data[i].TIPO_PRODUCTO_IDTIPO+"</td><td>"
+											"<tr><td>"
 													+ data[i].CODIGO
 													+ "</td><td>"
-													+ data[i].NOMBRE
+													+ data[i].NOM_PRO
 													+ "</td><td  style='max-width:30px;'><input type='text' class='form-control'  id='input" 
 													+ data[i].IDPRODUCTO
-													+ "'></td><td ><button type='button' class='btn btn-success text-white'  onclick='seleccionar(\""
-													+ a
+													+ "'></td><td ><button type='button' class='btn btn-success text-white'  onclick='selecciona(\""
+													+ data[i].CODIGO
 													+ "\",\""
-													+ b												
-													+ "\",\""
-													+ c
+													+data[i].NOM_PRO
+													+"\",\""
+													+ data[i].NOM_TIPO
 													+ "\", "
 													+ data[i].IDPRODUCTO
 													+ ")'>"
-													+ "<i class='fa fa-location-arrow '></i></button></td></tr>");
+													+ "<i class='fa fa-location-arrow'></i></button></td></tr>");
 
 						}
 					});
 
 }
 
-function seleccionar(a,b,c,id_pro) {
-
+function selecciona(a,b,c,id_pro) {
+alert("loco");
 	var input = $("#input" + id_pro + "").val();	
 	if (input === '') {		
 		cant_faltante();
@@ -133,13 +130,16 @@ function obtenerdatos() {
 						
 								
 	}else{
-		$.post("guardarPedido",{titulo:titu,descripcion:descri,idsucursal:1,idencargado:1}, function (data) {    						
+		$.post("guardarPedido",{titulo:titu,descripcion:descri,idsucursal:1,idencargado:1}, function (data) {   
+			alert(data.IDI);
 			Detallepedido(data.IDI);
 			/*
 			for ( var i in data) {
 			alert(data[i].IDI);
 			}
 			*/					
+			
+			
 	    });			
 	}				
 }
@@ -148,8 +148,8 @@ function obtenerdatos() {
 
 function Detallepedido(a){	
 	var prod = JSON.stringify(ProductosSolicitados);
-	var proa = JSON.stringify(a);	
-	$.post("guardarDetallePedido", {list:prod,idp:proa}, function (data) {
+		
+	$.post("guardarDetallePedido", {list:prod,idp:a}, function (data) {
         alert(data);
 });	
 }

@@ -17,6 +17,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import pe.org.sehs.serviceImp.DetallePedidoServiceImpl;
+import pe.org.sehs.serviceImp.PedidoServiceImpl;
 import pe.org.sehs.serviceImp.ProductoServiceImpl;
 
 @Controller
@@ -24,6 +25,9 @@ public class ProductoController {
 
 	@Autowired
 	private ProductoServiceImpl productoSer;
+	
+	@Autowired
+	private PedidoServiceImpl pedidoSer;
 
 
 	@RequestMapping(path = "/listarProductos", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -32,5 +36,8 @@ public class ProductoController {
 		return g.toJson(productoSer.readAll());
 	}
 
+	
+
+	
 	
 }

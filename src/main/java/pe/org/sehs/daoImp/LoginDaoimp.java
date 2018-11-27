@@ -89,7 +89,7 @@ public class LoginDaoimp implements LoginDao {
 		SqlParameterSource parametrosCountDataFile = new MapSqlParameterSource().addValues(parametrosIngresoMap);
 		Map<String, Object> parametrosSalida = jdbcCall.execute(parametrosCountDataFile);	
 		List<Map<String,Object>> list = (List<Map<String, Object>>) (parametrosSalida.get("return"));	
-		System.out.println(list);
+		System.out.println("Esto es lista"+list);
 		MENU m=new MENU();
 		for (Map<String, Object> mm : list) {								
 			String nom=(String)mm.get("NOMBRE");

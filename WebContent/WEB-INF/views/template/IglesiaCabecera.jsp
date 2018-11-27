@@ -30,21 +30,7 @@
 						</div></li>
 				</ul>
 				<ul class="nav navbar-nav float-right">
-					<li class="dropdown dropdown-language nav-item"><a
-						class="dropdown-toggle nav-link" id="dropdown-flag" href="#"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-							class="flag-icon flag-icon-gb"></i><span
-							class="selected-language"></span></a>
-						<div class="dropdown-menu" aria-labelledby="dropdown-flag">
-							<a class="dropdown-item" href="#"><i
-								class="flag-icon flag-icon-gb"></i> English</a> <a
-								class="dropdown-item" href="#"><i
-								class="flag-icon flag-icon-fr"></i> French</a> <a
-								class="dropdown-item" href="#"><i
-								class="flag-icon flag-icon-cn"></i> Chinese</a> <a
-								class="dropdown-item" href="#"><i
-								class="flag-icon flag-icon-de"></i> German</a>
-						</div></li>
+					
 					<li class="dropdown dropdown-notification nav-item"><a
 						class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i
 							class="ficon ft-bell"></i> <span
@@ -133,6 +119,7 @@
 								class="dropdown-item text-muted text-center"
 								href="javascript:void(0)">Read all notifications</a></li>
 						</ul></li>
+						
 					<li class="dropdown dropdown-notification nav-item"><a
 						class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i
 							class="ficon ft-mail"></i> <span
@@ -262,7 +249,7 @@
 			
 			
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-9">
 							<p style="margin-top:15px;"><%=session.getAttribute("nom_rol")%></p>	
 				
 				</div>

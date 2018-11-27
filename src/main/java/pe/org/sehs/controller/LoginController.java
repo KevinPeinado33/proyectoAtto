@@ -63,25 +63,24 @@ public class LoginController {
 		// String contra = request.getParameter("coo");
 		List<Map<String, Object>> list = (lsim.validar(nomus, contra));
 		if (list.size() == 0) {
-			System.out.println("usuari incorrecto");
+			System.out.println("usuario incorrecto");
 			returne = "redirect:/";
 		} else {
 
 			for (Map<String, Object> mm : list) {
-				System.out.println("lleg proyyo");
-				session.setAttribute("nom", mm.get("NOMBRES"));
-				session.setAttribute("nom_rol", mm.get("NOM_ROL"));
-				System.out.println(mm.get("IDPERSONA").getClass());
-				String a = (String) mm.get("IDPERSONA");
-				num = Integer.parseInt(a);
+						
+				String NOMBRES = (String) mm.get("NOMBRES");
+				String NOM_ROL = (String) mm.get("NOM_ROL");
+				String ID = (String) mm.get("IDPERSONA");
+				num=Integer.parseInt(ID);								
+				session.setAttribute("nom",NOMBRES);
+				session.setAttribute("nom_rol",NOM_ROL);
 				System.out.println(num);
 			}
-			List<MENU> list1 =(List<MENU>) (lsim.menu(num));
-			session.setAttribute("menu",list1);
-
-
-			for (MENU game: list1) {
-			    System.out.println(game.getIcon());
+			List<MENU> list1 = (List<MENU>) (lsim.menu(num));
+			session.setAttribute("menu", list1);
+			for (MENU game : list1) {
+				System.out.println(game.getIcon());
 			}
 
 			returne = "main";

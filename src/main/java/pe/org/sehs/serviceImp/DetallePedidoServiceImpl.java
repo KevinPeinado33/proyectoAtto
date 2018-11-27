@@ -16,19 +16,19 @@ public class DetallePedidoServiceImpl implements DetallePedidoService{
 	private DetallePedidoDaoImp dpi;
 	
 	@Override
-	public List<Map<String, Object>> listarDetallePedido(int id_pedido) {
+	public List<Map<String, Object>> listarDetallePedido(String id_pedido) {
 		// TODO Auto-generated method stub
 		return dpi.listarDetallePedido(id_pedido);
 	}
 
 	@Override
-	public int CrearDetallePedido(int catidad, int idped, int idpro) {
+	public int CrearDetallePedido(int catidad,String idped, String idpro) {
 		// TODO Auto-generated method stub
 		return dpi.CrearDetallePedido(catidad, idped, idpro);
 	}
 
 	@Override
-	public int updateDetallePedido(int iddte, int esta) {
+	public int updateDetallePedido(String iddte, String esta) {
 		// TODO Auto-generated method stub
 		return dpi.updateDetallePedido(iddte, esta);
 	}

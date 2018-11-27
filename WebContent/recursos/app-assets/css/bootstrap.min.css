@@ -2027,7 +2027,7 @@ pre code {
 }
 
 .table tbody+tbody {
-	border-top: 2px solid #98A4B8
+	border-top: 0px solid #98A4B8
 }
 
 .table .table {

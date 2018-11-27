@@ -74,94 +74,63 @@ body {
 				<!-- DOM - jQuery events table -->
 				<section id="dom">
 				<div class="row">
-					<div class="col-12">
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title">Lista de Pedidos</h4>
-								<a class="heading-elements-toggle"><i
-									class="fa fa-ellipsis-v font-medium-3"></i></a>
-								<div class="heading-elements">
-									<ul class="list-inline mb-0">
-										<li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-										<li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-										<li><a data-action="expand"><i class="ft-maximize"></i></a></li>
-										<li><a data-action="close"><i class="ft-x"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="card-content collapse show">
-								<div class="card-body card-dashboard">
 
 
 
-
-
-									<div class="container" style="margin-top: 20px;">
-										<div class="table-responsive">
-											<table class="table" id="tablita1">
-												<thead>
-													<tr>
-														<th>Código</th>
-														<th>Nombre</th>
-														<th>Tipo</th>
-														<th>Cantidad</th>
-														<th>Acciones</th>
-													</tr>
-												</thead>
-												<tbody>
-
-												</tbody>
-											</table>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
+					<div id="contenido" style="weight:500px;">
+						
 					</div>
-				</section>
-				<!-- DOM - jQuery events table -->
-				<!-- Column rendering table -->
 
-				<!-- File export table -->
+
+
+
+
+
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- BEGIN VENDOR JS-->
-	<script src="${urlrecursos}/app-assets/vendors/js/vendors.min.js"
-		type="text/javascript"></script>
-	<!-- BEGIN VENDOR JS-->
-	<!-- BEGIN PAGE VENDOR JS-->
-	<script
-		src="${urlrecursos}/app-assets/vendors/js/tables/datatable/datatables.min.js"
-		type="text/javascript"></script>
-	<script
-		src="${urlrecursos}/app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js"
-		type="text/javascript"></script>
-	<script
-		src="${urlrecursos}/app-assets/vendors/js/tables/buttons.flash.min.js"
-		type="text/javascript"></script>
-	<script src="${urlrecursos}/app-assets/vendors/js/tables/jszip.min.js"
-		type="text/javascript"></script>
-	<script
-		src="${urlrecursos}/app-assets/vendors/js/tables/pdfmake.min.js"
-		type="text/javascript"></script>
-	<script src="${urlrecursos}/app-assets/vendors/js/tables/vfs_fonts.js"
-		type="text/javascript"></script>
-	<script
-		src="${urlrecursos}/app-assets/vendors/js/tables/buttons.html5.min.js"
-		type="text/javascript"></script>
-	<script
-		src="${urlrecursos}/app-assets/vendors/js/tables/buttons.print.min.js"
-		type="text/javascript"></script>
-	<!-- END PAGE VENDOR JS-->
-	<!-- BEGIN STACK JS-->
-	<script src="${urlrecursos}/app-assets/js/core/app-menu.js"
-		type="text/javascript"></script>
-	<script src="${urlrecursos}/app-assets/js/core/app.js"
-		type="text/javascript"></script>
-	<script src="${urlrecursos}/app-assets/js/scripts/customizer.js"
-		type="text/javascript"></script>
+		</section>
+		<!-- DOM - jQuery events table -->
+		<!-- Column rendering table -->
 
+		<!-- File export table -->
+
+		<!-- BEGIN VENDOR JS-->
+		<script src="${urlrecursos}/app-assets/vendors/js/vendors.min.js"
+			type="text/javascript"></script>
+		<!-- BEGIN VENDOR JS-->
+		<!-- BEGIN PAGE VENDOR JS-->
+		<script
+			src="${urlrecursos}/app-assets/vendors/js/tables/datatable/datatables.min.js"
+			type="text/javascript"></script>
+		<script
+			src="${urlrecursos}/app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js"
+			type="text/javascript"></script>
+		<script
+			src="${urlrecursos}/app-assets/vendors/js/tables/buttons.flash.min.js"
+			type="text/javascript"></script>
+		<script src="${urlrecursos}/app-assets/vendors/js/tables/jszip.min.js"
+			type="text/javascript"></script>
+		<script
+			src="${urlrecursos}/app-assets/vendors/js/tables/pdfmake.min.js"
+			type="text/javascript"></script>
+		<script src="${urlrecursos}/app-assets/vendors/js/tables/vfs_fonts.js"
+			type="text/javascript"></script>
+		<script
+			src="${urlrecursos}/app-assets/vendors/js/tables/buttons.html5.min.js"
+			type="text/javascript"></script>
+		<script
+			src="${urlrecursos}/app-assets/vendors/js/tables/buttons.print.min.js"
+			type="text/javascript"></script>
+		<!-- END PAGE VENDOR JS-->
+		<!-- BEGIN STACK JS-->
+		<script src="${urlrecursos}/app-assets/js/core/app-menu.js"
+			type="text/javascript"></script>
+		<script src="${urlrecursos}/app-assets/js/core/app.js"
+			type="text/javascript"></script>
+		<script src="${urlrecursos}/app-assets/js/scripts/customizer.js"
+			type="text/javascript"></script>
+		<script src="${urlrecursos}/js/BandejaEncargado.js"
+			type="text/javascript"></script>
 </body>
 </html>

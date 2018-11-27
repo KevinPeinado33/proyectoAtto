@@ -46,7 +46,6 @@ body {
 	data-open="click" data-menu="vertical-menu" data-col="2-columns">
 
 	<jsp:include page="template/IglesiaCabecera.jsp"></jsp:include>
-
 	<div class="app-content content">
 		<div class="content-wrapper">
 			<div class="content-header row">
@@ -291,8 +290,8 @@ body {
 
 						</div>
 						<div class="container pull-right" style="margin-top: 5px;">
-							<button type="button" onclick="obtenerdatos();"
-								class="btn btn-blue round btn-min-width mr-1 mb-1 float-right">
+							<button type="button" onclick="obtenerdatos();" style="heigth:40%;"
+								class="btn btn-blue btn-min-width mr-1 mb-1 float-right">
 								Aceptar<i class="fa fa-chevron-right" style="margin-left: 10px;"></i>
 							</button>
 						</div>
@@ -352,7 +351,7 @@ body {
 	<script
 		src="${urlrecursos}/app-assets/vendors/js/extensions/toastr.min.js"
 		type="text/javascript"></script>
-	<script src="${urlrecursos}/js/nuevopedido.js" type="text/javascript"></script>
+	<script src="${urlrecursos}/js/JS_RealizarPedido.js" type="text/javascript"></script>
 
 </body>
 </html>

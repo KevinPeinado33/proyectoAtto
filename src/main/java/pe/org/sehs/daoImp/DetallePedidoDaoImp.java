@@ -29,26 +29,28 @@ public class DetallePedidoDaoImp implements DetallePedidoDao{
 
 
 	@Override
-	public List<Map<String, Object>> listarDetallePedido(int id_pedido) {
+	public List<Map<String, Object>> listarDetallePedido(String id_pedido) {
 		// TODO Auto-generated method stub
-		return this.jdbcTemplate.queryForList("SELECT D.IDDETALLEPEDIDO,D.CANTIDAD,PRO.CODIGO,PRO.NOMBRE FROM PEDIDO P,DETALLE_PEDIDO D,PRODUCTO PRO WHERE IDPEDIDO=? AND PRO.IDPRODUCTO=D.PRODUCTO_IDPRODUCTO AND D.PEDIDO_IDPEDIDO=P.IDPEDIDO",id_pedido);
+		return this.jdbcTemplate.queryForList("SELECT D.IDDETALLE_PEDIDO,D.CANTIDAD,PRO.CODIGO,PRO.NOM_PRO FROM PEDIDO P,DETALLE_PEDIDO D,PRODUCTO PRO WHERE IDPEDIDO=? AND PRO.IDPRODUCTO=D.PRODUCTO_IDPRODUCTO AND D.PEDIDO_IDPEDIDO=P.IDPEDIDO",id_pedido);
 	}
 	
 	@Override
-	public int CrearDetallePedido(int catidad, int idped, int idpro) {
+	public int CrearDetallePedido(int catidad, String idped,String idpro) {
 		
 		System.out.println("legueee");
-		
+		System.out.println(idped);
+		System.out.println(idpro);
+		System.out.println(catidad);
 		int x = 0;
 		try {
 			
 			System.out.println("legueee");
 			Map<String, Object> parametrosIngresoMap = new HashMap<String, Object>();			
-			jdbcCall=new SimpleJdbcCall(jdbcTemplate).withCatalogName("PKG_PEDIDO").withProcedureName("P_CREATE_DETALLE_PEDIDO");					
+			jdbcCall=new SimpleJdbcCall(jdbcTemplate).withCatalogName("PKG_PEDIDO").withProcedureName("PRO_CREATE_DETALLE_PEDIDO");					
 			parametrosIngresoMap.put("CANTI",catidad);
-			parametrosIngresoMap.put("ID_PRO",idpro);
 			parametrosIngresoMap.put("ID_PE", idped);
-							
+			parametrosIngresoMap.put("ID_PRO",idpro);
+									
 			SqlParameterSource parametrosCountDataFile = new MapSqlParameterSource().addValues(parametrosIngresoMap);
 			jdbcCall.execute(parametrosCountDataFile);	
 				
@@ -62,7 +64,7 @@ public class DetallePedidoDaoImp implements DetallePedidoDao{
 		return x;
 	}
 	@Override
-	public int updateDetallePedido(int iddte, int esta) {
+	public int updateDetallePedido(String iddte,String esta) {
 		Map<String, Object> parametrosIngresoMap = new HashMap<String, Object>();			
 		jdbcCall=new SimpleJdbcCall(jdbcTemplate).withCatalogName("PKG_PEDIDO").withProcedureName("P_DETALLE_PEDIDO_UPDATE");					
 		parametrosIngresoMap.put("IDDET",iddte);

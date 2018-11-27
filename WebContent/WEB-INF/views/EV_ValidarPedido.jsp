@@ -11,6 +11,16 @@
 <spring:url value="/recursos" var="urlrecursos"></spring:url>
 <link href="${urlrecursos}/app-assets/css/vendors.min.css"
 	rel="stylesheet">
+	<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/vendors/css/extensions/toastr.css">
+  <link rel="stylesheet" type="text/css" href="${urlrecursos}/app-assets/vendors/css/forms/toggle/switchery.min.css">
+  <!-- END VENDOR CSS-->
+  <!-- BEGIN STACK CSS-->
+  <link rel="stylesheet" type="text/css" href="${urlrecursos}/app-assets/css/app.css">
+  <!-- END STACK CSS-->
+  <!-- BEGIN Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="${urlrecursos}/app-assets/css/plugins/forms/switch.css">
+	
 <link rel="apple-touch-icon"
 	href="${urlrecursos}/app-assets/images/ico/apple-icon-120.png">
 <link rel="shortcut icon" type="image/x-icon"
@@ -30,53 +40,69 @@
 	href="${urlrecursos}/app-assets/css/core/colors/palette-gradient.css">
 <link rel="stylesheet" type="text/css"
 	href="${urlrecursos}/assets/css/style.css">
+	 <link rel="stylesheet" type="text/css" href="${urlrecursos}/app-assets/css/plugins/forms/checkboxes-radios.css">
+<link rel="stylesheet" type="text/css"
+	href="${urlrecursos}/app-assets/vendors/css/extensions/toastr.css">
 
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"> 
 
-    <style>
-        body,label,input{            
-    font-family: 'Quicksand', sans-serif;
+
+<style>
+body, label, input {
+
+
+
+
+
+
+
+
+    font-family: 'Questrial', sans-serif;
+
+
+
+
+
+
+
+
+
+}
 </style>
 <body
 	class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
 	data-open="click" data-menu="vertical-menu" data-col="2-columns">
 
-	<jsp:include page="template/Trabajador.jsp"></jsp:include>
+	<jsp:include page="template/IglesiaCabecera.jsp"></jsp:include>
 
 	<div class="app-content content">
 		<div class="content-wrapper">
 			<div class="content-header row">
 				<div class="content-header-left col-md-6 col-12 mb-2">
-					<h3 class="content-header-title mb-0">
-						<i class="fa fa-plus-circle" style="margin-right: 8px;"></i>Validar
-						Pedido
+					<h3 class="content-header-title mb-0" style="font-weight:500;">
+						<a href="#" class="btn btn-bg-circle btn-social-icon mr-1 mb-1 btn-dropbox"
+							style="margin-right: 15px;margin-right:20px;"> <span
+							class="fa fa-pencil-square-o font-medium-3"></span>
+							
+							
+							
+							
+							
+						</a>
+						Validar Pedidos
 					</h3>
-					<div class="row breadcrumbs-top">
-						<div class="breadcrumb-wrapper col-12">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#">Menu</a></li>
-								<li class="breadcrumb-item active">Validar Pedido</li>
-							</ol>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div class="content-body">
 
-				<section id="card-actions">
-				<div class="row">
+				<section id="card-actions" style="margin-top:30px;">
+				<div class="row" >
 					<div class="col-12">
 						<div class="card">
 							<div class="card-header">
 
-								<div class="card-tittle">
 
-									<h4>
-										<i class="fa fa-file-text" style="margin-right: 8px;"> </i>Lista
-										Pedidos
-									</h4>
-
-								</div>
 
 								<a class="heading-elements-toggle"><i
 									class="fa fa-ellipsis-v font-medium-3"></i></a>
@@ -97,12 +123,14 @@
 												<table class="table" id="tablita">
 													<thead>
 														<tr>
-															<th>Código</th>
-															<th>Titulo</th>
+															<th style="width: 30%;">Encargado</th>
+															<th style="margin-left: -200px;">Código Pedido</th>
 															<th>Fecha Creación</th>
-															<th>Validar</th>
+															<th></th>
 														</tr>
 													</thead>
+
+
 													<tbody>
 
 													</tbody>
@@ -111,40 +139,34 @@
 
 
 										</div>
-										<div class="modal fade text-left" id="large" tabindex="-1"
-											role="dialog" aria-labelledby="myModalLabel17"
-											aria-hidden="true">
+										<div class="modal  fade text-left" id="defaultSize" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
+                          aria-hidden="true">
 											<div class="modal-dialog modal-lg" role="document">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h4 class="modal-title" id="myModalLabel17">Productos</h4>
+
 														<button type="button" class="close" data-dismiss="modal"
 															aria-label="Close">
 															<span aria-hidden="true">&times;</span>
 														</button>
 													</div>
 													<div class="modal-body">
-														<p>*Puede buscar los productos solicitados.No olvide
-															poner la cantidad del producto solicitado</p>
-														<hr>
 
 
 
 														<div class="container">
+														
+														<h3>Validar Productos</h3>
 
-															<div class="row"></div>
-
-
-
-
-
-															<div class="container" style="margin-top: -18px;">
+															<div class="container" style="margin-top:-25px;">
 
 
 																<div class="table-responsive">
-																	<table class="table" id="tablita2">
+																	<table class="table" id="tablita2"
+																		style="margin-top: 38px;">
 																		<thead>
 																			<tr>
+
 																				<th>Código</th>
 																				<th>Nombre</th>
 																				<th>Cantidad</th>
@@ -161,27 +183,41 @@
 															</div>
 
 
-															<div class="container float-right">
-															
-															<button type="button" class="btn btn-danger btn-round mr-1 mb-1" onclick='validarpedido()'>Validar Pedido</button>
+															<div class="container">
+
+																<button type="button"
+																	style="float: right; margin-top: 20px;"
+																	class="btn btn-danger btn-round mr-1 mb-1 text-white"
+																	onclick='validarpedido()'>Validar Pedido</button>
+																<button type="button"
+																	style="float: right; margin-top: 19.5px;"
+																	class="btn btn-outline-secondary round btn-min-width mr-1 mb-1"
+																	data-dismiss="modal">Cancelar</button>
+
+
+
+
 															</div>
-
-
-
-
 														</div>
-
 													</div>
-												</div>
-											</div>
 
+
+												</div>
+
+
+
+
+											</div>
 
 										</div>
 									</div>
 								</div>
+
+
 							</div>
 						</div>
 					</div>
+				</div>
 				</section>
 			</div>
 		</div>
@@ -201,15 +237,25 @@
 	<script
 		src="${urlrecursos}/app-assets/vendors/js/forms/toggle/switchery.min.js"
 		type="text/javascript"></script>
+		
+	
+		
+		
 	<script src="${urlrecursos}/app-assets/js/core/app-menu.js"
 		type="text/javascript"></script>
 	<script src="${urlrecursos}/app-assets/js/core/app.js"
 		type="text/javascript"></script>
-			<script src="${urlrecursos}/js/validarpedido.js" type="text/javascript"></script>
+	<script
+		src="${urlrecursos}/app-assets/vendors/js/extensions/toastr.min.js"
+		type="text/javascript"></script>
 	<script src="${urlrecursos}/app-assets/js/scripts/customizer.js"
 		type="text/javascript"></script>
 	<script src="${urlrecursos}/app-assets/js/scripts/forms/switch.js"
 		type="text/javascript"></script>
+	<script
+		src="${urlrecursos}/app-assets/vendors/js/extensions/toastr.min.js"
+		type="text/javascript"></script>
+	<script src="${urlrecursos}/js/validarpedidos.js" type="text/javascript"></script>
 
 
 </body>

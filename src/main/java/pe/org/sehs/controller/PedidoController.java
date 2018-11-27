@@ -34,7 +34,7 @@ public class PedidoController {
 	public @ResponseBody int guardarDetallePedido(HttpServletRequest request) {
 		
 		 String data = request.getParameter("list");
-		 int idi = Integer.parseInt(request.getParameter("idp"));
+		 String idi = request.getParameter("idp");
        
          System.out.println(idi);
          JsonParser parser = new JsonParser();
@@ -42,7 +42,7 @@ public class PedidoController {
          int r = 1;
          for (JsonElement obj : gsonArr) {
              JsonObject gsonObj = obj.getAsJsonObject();          
-            detalleSer.CrearDetallePedido(Integer.parseInt(gsonObj.get("cant").getAsString()),idi, Integer.parseInt(gsonObj.get("idpro").getAsString()));             
+            detalleSer.CrearDetallePedido(Integer.parseInt(gsonObj.get("cant").getAsString()),idi,gsonObj.get("idpro").getAsString());             
         }
 		return r;
 					
@@ -75,7 +75,7 @@ public class PedidoController {
 	@RequestMapping(path = "/detallepedido", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody String listDetallePedido(HttpServletRequest request){	
 		
-		int id = Integer.parseInt(request.getParameter("idpedido"));
+	String id = request.getParameter("idpedido");
 		Gson g=new Gson();
 		return g.toJson(detalleSer.listarDetallePedido(id));
 	}
@@ -83,9 +83,9 @@ public class PedidoController {
 	@RequestMapping(path = "/validarpeC", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody String validarPedidove(HttpServletRequest request){	
 		
-		int id = Integer.parseInt(request.getParameter("idpedido"));
-		int esta = Integer.parseInt(request.getParameter("estado"));		
-		System.out.println("locoo"+id);
+		String id =request.getParameter("idpedido");
+		String esta = request.getParameter("estado");		
+		System.out.println("locoo"+id+"esta"+esta);
 		Gson g=new Gson();
 		return g.toJson(pedidoSer.validarPedido(id, 1, esta));
 	}
@@ -94,8 +94,8 @@ public class PedidoController {
 	@RequestMapping(path = "/updateDetalle", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody String updateDetalle(HttpServletRequest request){	
 		
-		int idde = Integer.parseInt(request.getParameter("iddetalle"));
-		int esta = Integer.parseInt(request.getParameter("estado"));
+		String idde =request.getParameter("iddetalle");
+		String esta = request.getParameter("estado");
 		Gson g=new Gson();
 		return g.toJson(detalleSer.updateDetallePedido(idde, esta));
 	}
@@ -108,6 +108,38 @@ public class PedidoController {
 		Gson g=new Gson();
 		return g.toJson(detalleSer.listarDetallePedidoValidar(1));
 	}
+	//////////////////////////////////
+	
+	
+	@RequestMapping(path = "/mostrarpedidoiglesia", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody String MostrarPedidoIglesia(HttpServletRequest request) {
+		System.out.println("llego a mostrar pedido");
+		Gson g = new Gson();
+		return g.toJson(pedidoSer.listarpedidoiglesia(1));
+	}
+	
+	@RequestMapping(path = "/mostrarfaltantes", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody String MostrarFaltantes(HttpServletRequest request) {
+		System.out.println("llego a mostrar pedido");
+		Gson g = new Gson();
+		return g.toJson(pedidoSer.listarFaltantes(1));
+	}
+
+	
+	
+	
+	@RequestMapping(path = "/mostrarpeSu", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody String MostrarProSu(HttpServletRequest request) {
+		System.out.println("llego a mostrar pedido");
+		Gson g = new Gson();
+		return g.toJson(pedidoSer.listarpedidoasucu(1));
+	}
+
+	//////////////////
+	
+
+	
+	
 	
 	
 
